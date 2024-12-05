@@ -9,5 +9,5 @@ pip install geopy geopandas shapely<br>
 <br>
 Usage:<br>
 1. Unzip and drop the shapefiles, your target Excel sheet with lat/long, and python file into a folder. <br>
-2. Update the file locations within the Python files.<br>
+2. Update the file locations within the Python file.<br>
 3. Run the Python script.<br>
