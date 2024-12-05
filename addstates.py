@@ -14,7 +14,7 @@ geo_df = gpd.GeoDataFrame(df, geometry=geometry)
 geo_df.set_crs(epsg=4326, inplace=True)
 
 # Load U.S. states shapefile
-states = gpd.read_file(r'path_to_shapefiles\tl_2024_us_state.shp')
+states = gpd.read_file(r'tl_2024_us_state.shp')
 
 # Reproject geo_df to match states CRS
 geo_df = geo_df.to_crs(states.crs)
@@ -23,5 +23,5 @@ geo_df = geo_df.to_crs(states.crs)
 geo_df = gpd.sjoin(geo_df, states, how="left", predicate="intersects")
 
 # Save the updated dataset
-geo_df.drop(columns='geometry').to_excel(r'path_to_output\updated_file_with_states.xlsx', index=False)
+geo_df.drop(columns='geometry').to_excel(r'updated_file_with_states.xlsx', index=False)
 
